@@ -38,6 +38,7 @@ import {
   getChatByName,
   getCommonGroups,
   getContact,
+  getPnLidEntry,
   getGroupMetadata,
   getGroupParticipantIDs,
   getHost,
@@ -216,6 +217,7 @@ if (typeof window.WAPI === 'undefined') {
   window.WAPI.getAllContacts = getAllContacts;
   window.WAPI.getMyContacts = getMyContacts;
   window.WAPI.getContact = getContact;
+  window.WAPI.getPnLidEntry = getPnLidEntry;
   window.WAPI.getAllChats = getAllChats;
   window.WAPI.haveNewMsg = hasUndreadMessages;
   window.WAPI.getAllChatsWithNewMsg = getAllChatsWithNewMessages;

@@ -26,7 +26,7 @@ export function initNewMessagesListener() {
         !newMessage.isStatusV3
       ) {
         setTimeout(
-          () => {
+          async () => {
             let message = window.WAPI.processMessageObj(
               newMessage,
               false,

@@ -14,22 +14,7 @@
  * You should have received a copy of the GNU Lesser General Public License
  * along with WPPConnect.  If not, see <https://www.gnu.org/licenses/>.
  */
-const wppconnect = require('../../dist');
 
-wppconnect
-  .create({
-    headless: false,
-  })
-  .then((client) => start(client))
-  .catch((error) => {
-    console.log(error);
-  });
-
-async function start(client) {
-  client.onMessage(async (message) => {
-    console.log('1', message);
-    cosnt;
-  });
-
-  client.onAnyMessage(async (message) => {});
+export async function getPnLidEntry(x) {
+  return await WPP.contact.getPnLidEntry(x);
 }

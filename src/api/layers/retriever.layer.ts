@@ -267,6 +267,20 @@ export class RetrieverLayer extends SenderLayer {
   }
 
   /**
+   * Retrieves PnLidEntry of given contact id
+   * @category Contact
+   * @param contactId
+   * @returns PnLidEntry as promise
+   */
+  public async getPnLidEntry(contactId: string) {
+    return evaluateAndReturn(
+      this.page,
+      (contactId) => WPP.contact.getPnLidEntry(contactId),
+      contactId
+    );
+  }
+
+  /**
    * Retrieves all contacts
    * @category Contact
    * @returns array of [Contact]

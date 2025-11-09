@@ -68,6 +68,7 @@ interface WAPI {
   getChatIsOnline: (chatId: string) => Promise<boolean>;
   getLastSeen: (chatId: string) => Promise<number | boolean>;
   getContact: (contactId: string) => Contact;
+  getPnLidEntry: (contactId: string) => Promise<any>;
   getGroupParticipantIDs: (groupId: string) => Id[];
   getHost: () => HostDevice;
   getWid: () => string;

@@ -87,3 +87,4 @@ export * from './presence';
 export * from './set-online-presence';
 export * from './set-temporary-messages';
 export * from './star-messages';
+export { getPnLidEntry } from './get-pnLidEntry';

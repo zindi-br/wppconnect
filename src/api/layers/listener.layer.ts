@@ -37,6 +37,8 @@ import { ProfileLayer } from './profile.layer';
 import { Label } from '../model/label';
 import { MsgKey } from '@wppconnect/wa-js/dist/whatsapp';
 
+import { defaultLogger } from '../../utils/logger';
+
 declare global {
   interface Window {
     onMessage: any;
@@ -106,10 +108,7 @@ export class ListenerLayer extends ProfileLayer {
             Promise.resolve().then(() => {
               const count = this.listenerEmitter.listenerCount(func);
               if (count > 0) {
-                this.log(
-                  'debug',
-                  `Emitting ${func} event (${count} registered)`
-                );
+                this.log('debug', `Emit ${func} event (${count} registered)`);
               }
               this.listenerEmitter.emit(func, ...args);
             });
@@ -161,6 +160,7 @@ export class ListenerLayer extends ProfileLayer {
           console.error(error);
         }
         try {
+          console.log('opa');
           if (!window['onAnyMessage'].exposed) {
             WPP.on('chat.new_message', (msg) => {
               const serialized = WAPI.processMessageObj(msg, true, false);

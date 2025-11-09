@@ -34,7 +34,7 @@ export class UILayer extends GroupLayer {
   public async openChat(chatId: string) {
     return evaluateAndReturn(
       this.page,
-      (chatId: string) => WPP.chat.openChatBottom(chatId),
+      (chatId: string) => (WPP.chat.openChatBottom as any)(chatId),
       chatId
     );
   }
@@ -48,7 +48,8 @@ export class UILayer extends GroupLayer {
   public async openChatAt(chatId: string, messageId: string) {
     return evaluateAndReturn(
       this.page,
-      (chatId: string, messageId) => WPP.chat.openChatAt(chatId, messageId),
+      (chatId: string, messageId) =>
+        (WPP.chat.openChatAt as any)(chatId, messageId),
       chatId,
       messageId
     );

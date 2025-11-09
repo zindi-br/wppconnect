@@ -14,22 +14,23 @@
  * You should have received a copy of the GNU Lesser General Public License
  * along with WPPConnect.  If not, see <https://www.gnu.org/licenses/>.
  */
-const wppconnect = require('../../dist');
+import { processLidTransformObj } from '../helper/process-lid-transform';
 
-wppconnect
-  .create({
-    headless: false,
-  })
-  .then((client) => start(client))
-  .catch((error) => {
-    console.log(error);
-  });
-
-async function start(client) {
-  client.onMessage(async (message) => {
-    console.log('1', message);
-    cosnt;
-  });
-
-  client.onAnyMessage(async (message) => {});
+export async function processMessageObj(
+  messageObj,
+  includeMe,
+  includeNotifications
+) {
+  const serializedMsg = WAPI._serializeMessageObj(messageObj);
+  const transformedMsg = await processLidTransformObj(serializedMsg);
+  console.log('transformedMsg', transformedMsg);
+  if (messageObj.isNotification) {
+    if (includeNotifications) return transformedMsg;
+    else return;
+    // System message
+    // (i.e. "Messages you send to this chat and calls are now secured with end-to-end encryption...")
+  } else if (messageObj.id.fromMe === false || includeMe) {
+    return transformedMsg;
+  }
+  return;
 }

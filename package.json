@@ -1,7 +1,7 @@
 {
-  "name": "@wppconnect-team/wppconnect",
+  "name": "@zindi-br/wppconnect",
   "version": "1.37.5",
-  "description": "WPPConnect is an open source project developed by the JavaScript community with the aim of exporting functions from WhatsApp Web to the node, which can be used to support the creation of any interaction, such as customer service, media sending, intelligence recognition based on phrases artificial and many other things, use your imagination... 😀🤔💭",
+  "description": "WppConnect",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
@@ -20,7 +20,7 @@
     "lint:js": "npx eslint -c .eslintrc.js --ext .js src",
     "lint:ts": "npx eslint -c .eslintrc.js --ext .ts src",
     "lint": "npm run lint:ts && npm run lint:js",
-    "prepare": "husky install && npm run clean && npm run build",
+    "prepare": "husky install",
     "release": "release-it",
     "start": "npm run build:client && tsc app.ts && node app.js",
     "test": "mocha -r ts-node/register src/tests/**/*.test.ts",
@@ -33,7 +33,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/wppconnect-team/wppconnect.git"
+    "url": "git+https://github.com/zindi-br/wppconnect.git"
   },
   "keywords": [
     "whatsapp",

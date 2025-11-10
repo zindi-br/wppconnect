@@ -1,6 +1,6 @@
 {
   "name": "@zindi-br/wppconnect",
-  "version": "1.37.6",
+  "version": "1.37.7",
   "description": "WppConnect",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",

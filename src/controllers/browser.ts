@@ -252,7 +252,7 @@ export async function injectApi(
     return;
   }
   await page.addScriptTag({
-    path: require.resolve('@wppconnect/wa-js'),
+    path: require.resolve('@zindi-br/wa-js'),
   });
 
   await page.evaluate(() => {

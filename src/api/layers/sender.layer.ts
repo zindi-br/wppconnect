@@ -24,7 +24,7 @@ import type {
   ForwardMessagesOptions,
   AllMessageOptions,
   SendMessageOptions,
-} from '@wppconnect/wa-js/dist/chat';
+} from '@zindi-br/wa-js/dist/chat';
 import * as path from 'path';
 import { Page } from 'puppeteer';
 import { CreateConfig } from '../../config/create-config';
@@ -43,7 +43,7 @@ import { ListenerLayer } from './listener.layer';
 import {
   OrderItems,
   OrderMessageOptions,
-} from '@wppconnect/wa-js/dist/chat/functions/sendChargeMessage';
+} from '@zindi-br/wa-js/dist/chat/functions/sendChargeMessage';
 import { PixParams } from '../../types/WAPI';
 
 export class SenderLayer extends ListenerLayer {

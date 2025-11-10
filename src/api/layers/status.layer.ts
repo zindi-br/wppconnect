@@ -24,7 +24,7 @@ import {
   fileToBase64,
   downloadFileToBase64,
 } from '../helpers';
-import { SendStatusOptions } from '@wppconnect/wa-js/dist/status';
+import { SendStatusOptions } from '@zindi-br/wa-js/dist/status';
 
 export class StatusLayer extends LabelsLayer {
   constructor(public page: Page, session?: string, options?: CreateConfig) {

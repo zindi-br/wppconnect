@@ -15,8 +15,8 @@
  * along with WPPConnect.  If not, see <https://www.gnu.org/licenses/>.
  */
 
-import { EditMessageOptions } from '@wppconnect/wa-js/dist/chat/functions/editMessage';
-import { MsgKey } from '@wppconnect/wa-js/dist/whatsapp';
+import { EditMessageOptions } from '@zindi-br/wa-js/dist/chat/functions/editMessage';
+import { MsgKey } from '@zindi-br/wa-js/dist/whatsapp';
 import { Page } from 'puppeteer';
 import { CreateConfig } from '../../config/create-config';
 import { evaluateAndReturn } from '../helpers';

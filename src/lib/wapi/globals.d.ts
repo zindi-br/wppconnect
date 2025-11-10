@@ -15,7 +15,7 @@
  * along with WPPConnect.  If not, see <https://www.gnu.org/licenses/>.
  */
 
-import type * as wajs from '@wppconnect/wa-js';
+import type * as wajs from '@zindi-br/wa-js';
 
 declare global {
   interface Window {

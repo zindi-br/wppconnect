@@ -14,7 +14,7 @@
  * You should have received a copy of the GNU Lesser General Public License
  * along with WPPConnect.  If not, see <https://www.gnu.org/licenses/>.
  */
-import type * as WAJS from '@wppconnect/wa-js';
+import type * as WAJS from '@zindi-br/wa-js';
 
 export * from './api/model';
 export * from './api/model/enum';

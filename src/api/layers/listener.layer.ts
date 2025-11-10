@@ -35,7 +35,7 @@ import { InterfaceMode } from '../model/enum/interface-mode';
 import { InterfaceState } from '../model/enum/interface-state';
 import { ProfileLayer } from './profile.layer';
 import { Label } from '../model/label';
-import { MsgKey } from '@wppconnect/wa-js/dist/whatsapp';
+import { MsgKey } from '@zindi-br/wa-js/dist/whatsapp';
 
 import { defaultLogger } from '../../utils/logger';
 

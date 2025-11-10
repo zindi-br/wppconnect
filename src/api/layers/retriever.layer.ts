@@ -28,7 +28,7 @@ import {
   Wid,
 } from '../model';
 import { SenderLayer } from './sender.layer';
-import { ChatListOptions } from '@wppconnect/wa-js/dist/chat';
+import { ChatListOptions } from '@zindi-br/wa-js/dist/chat';
 
 export class RetrieverLayer extends SenderLayer {
   constructor(public page: Page, session?: string, options?: CreateConfig) {
